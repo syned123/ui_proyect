@@ -2,13 +2,10 @@ body {
   margin: 0;
 }
 .contenedorPrincipal {
-  background: rgb(4, 10, 7);
-  background: linear-gradient(
-    0deg,
-    rgba(4, 10, 7, 1) 0%,
-    rgba(121, 11, 9, 1) 85%,
-    rgba(168, 0, 0, 1) 100%
-  );
+  background-image: url("./img/background.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 .contenedorPadre {
   display: flex;
@@ -26,7 +23,7 @@ body {
   border: 5px solid rgb(255, 255, 255);
 }
 .contenedorIzquierda {
-  background-image: url("./img/6600edcf4a8bd75997220a7b5a34e771.jpg");
+  background-image: url("./img/fondo.jpg");
   background-repeat: no-repeat;
   width: 50vw;
 }
@@ -114,7 +111,7 @@ body {
   transition: all 0.4s;
 }
 .input:focus + .focus-input + .symbol-input {
-  color: rgba(156, 6, 6, 0.8);
+  color: rgba(1, 50, 11, 0.71);
   padding-left: 10px;
 }
 .login-form-btn-container {
@@ -142,5 +139,5 @@ body {
   border: none;
 }
 .login-form-btn:hover {
-  background: #8d1e1e;
+  background: #02320ab1;
 }
