@@ -1,0 +1,15 @@
+.contenedor-first {
+  margin: 1rem;
+  padding: 1rem;
+}
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+}
+.container-textfield {
+  display: flex;
+  justify-content: space-between;
+}
+.textfield {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}

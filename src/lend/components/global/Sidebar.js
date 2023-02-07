@@ -4,23 +4,8 @@ import userIcon from "../../img/user.jpg";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
-
-import {
-  BarChartOutlined,
-  CalendarTodayOutlined,
-  ContactsOutlined,
-  HelpOutlineOutlined,
-  HomeOutlined,
-  MapOutlined,
-  MenuOutlined,
-  PeopleOutlined,
-  PersonOutlined,
-  PieChartOutlineOutlined,
-  ReceiptOutlined,
-  TimelineOutlined,
-} from "@mui/icons-material";
 import { Menu, MenuItem, ProSidebar } from "react-pro-sidebar";
-
+import { CiTextAlignJustify, CiViewList, CiHome } from "react-icons/ci";
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -57,10 +42,10 @@ export const Sidebar = () => {
             padding: "5px 35px 5px 20px !important",
           },
           "& .pro-inner-item:hover": {
-            color: "#868dfb !important",
+            color: "#FFFFFF !important",
           },
           "& .pro-menu-item.active": {
-            color: "#6870fa !important",
+            color: "#97DAA2 !important",
           },
         }}
       >
@@ -68,7 +53,7 @@ export const Sidebar = () => {
           <Menu iconShape="square">
             <MenuItem
               onClick={() => setIsCollapsed(!isCollapsed)}
-              icon={isCollapsed ? <MenuOutlined /> : undefined}
+              icon={isCollapsed ? <CiTextAlignJustify /> : undefined}
               style={{
                 margin: "10px 0 20px 0",
                 color: colors.grey[100],
@@ -85,7 +70,7 @@ export const Sidebar = () => {
                     ADMINIS
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                    <MenuOutlined />
+                    <CiTextAlignJustify />
                   </IconButton>
                 </Box>
               )}
@@ -120,14 +105,21 @@ export const Sidebar = () => {
               <Item
                 title="Dashboard"
                 to="dashboard"
-                icon={<HomeOutlined />}
+                icon={<CiHome />}
                 selected={selected}
                 setSelected={setSelected}
               />
               <Item
                 title="Clientes"
                 to="client"
-                icon={<HomeOutlined />}
+                icon={<CiViewList />}
+                selected={selected}
+                setSelected={setSelected}
+              />
+              <Item
+                title="Pre-Aprobación"
+                to="preAprobación"
+                icon={<CiViewList />}
                 selected={selected}
                 setSelected={setSelected}
               />

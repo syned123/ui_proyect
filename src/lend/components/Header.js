@@ -8,7 +8,7 @@ export const Header = ({ title, subTitle }) => {
   return (
     <Box mb="30px">
       <Typography
-        variant="h2"
+        variant="h4"
         color={colors.grey[100]}
         fontWeight="bold"
         sx={{ mb: "5px" }}

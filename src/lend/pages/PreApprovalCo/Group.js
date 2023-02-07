@@ -110,23 +110,23 @@ export const Group = () => {
               <div>
                 <h5>Registro clientes</h5>
               </div>
-              <div className="FormClient">
+              <div className="container-textfield">
                 <div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Nombres"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celula Identidad"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celular / Telefono"
@@ -135,21 +135,21 @@ export const Group = () => {
                   </div>
                 </div>
                 <div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Apellidos"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Direccion"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celular de referencia"
@@ -158,23 +158,23 @@ export const Group = () => {
                   </div>
                 </div>
               </div>
-              <div className="FormClient">
+              <div className="container-textfield">
                 <div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Nombres"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celula Identidad"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celular / Telefono"
@@ -183,21 +183,21 @@ export const Group = () => {
                   </div>
                 </div>
                 <div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Apellidos"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Direccion"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celular de referencia"
@@ -206,23 +206,23 @@ export const Group = () => {
                   </div>
                 </div>
               </div>
-              <div className="FormClient">
+              <div className="container-textfield">
                 <div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Nombres"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celula Identidad"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celular / Telefono"
@@ -231,21 +231,21 @@ export const Group = () => {
                   </div>
                 </div>
                 <div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Apellidos"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Direccion"
                       variant="outlined"
                     />
                   </div>
-                  <div>
+                  <div className="textfield">
                     <TextField
                       id="outlined-basic"
                       label="Celular de referencia"
@@ -259,15 +259,15 @@ export const Group = () => {
               <div>
                 <h5>Solicitud</h5>
               </div>
-              <div className="FormClient">
-                <div>
+              <div className="container-textfield">
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Monto"
                     variant="outlined"
                   />
                 </div>
-                <div>
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Plazo"

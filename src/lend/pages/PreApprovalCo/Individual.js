@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
-
+import "../styles.css";
 export const Individual = () => {
   const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState("paper");
@@ -75,15 +75,15 @@ export const Individual = () => {
                 />
               </FormGroup>
               <FormLabel>Registro Cliente</FormLabel>
-              <div className="divSoli">
-                <div>
+              <div className="container-textfield">
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Nombres"
                     variant="outlined"
                   />
                 </div>
-                <div>
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Apellidos"
@@ -91,15 +91,15 @@ export const Individual = () => {
                   />
                 </div>
               </div>
-              <div className="divSoli">
-                <div>
+              <div className="container-textfield">
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Celula Identidad"
                     variant="outlined"
                   />
                 </div>
-                <div>
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Direccion"
@@ -107,15 +107,15 @@ export const Individual = () => {
                   />
                 </div>
               </div>
-              <div className="divSoli">
-                <div>
+              <div className="container-textfield">
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Tel / Cel"
                     variant="outlined"
                   />
                 </div>
-                <div>
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Cel Ref"
@@ -124,15 +124,15 @@ export const Individual = () => {
                 </div>
               </div>
               <FormLabel>Solicitud</FormLabel>
-              <div className="divSoli">
-                <div>
+              <div className="container-textfield">
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Monto"
                     variant="outlined"
                   />
                 </div>
-                <div>
+                <div className="textfield">
                   <TextField
                     id="outlined-basic"
                     label="Plazo"
