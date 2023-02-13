@@ -1,23 +1,20 @@
 import {
+  Avatar,
   Box,
+  Button,
   IconButton,
   InputBase,
   Menu,
   MenuItem,
   useTheme,
 } from "@mui/material";
+import userIcon from "../../img/user.jpg";
 import { useContext, useState } from "react";
 import { ColorModeContext, tokens } from "../../theme";
-import SearchIcon from "@mui/icons-material/Search";
-import {
-  DarkModeOutlined,
-  LightModeOutlined,
-  NotificationAddOutlined,
-  PersonOutlined,
-  SettingsOutlined,
-} from "@mui/icons-material";
+import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";
 import { useAuthStore } from "../../../hooks/useAuthStore";
-export const Navbar = () => {
+import { FaBars } from "react-icons/fa";
+export const Navbar = ({ c }) => {
   const { startLogout } = useAuthStore();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -30,6 +27,9 @@ export const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const handleToggleSidebar = (value) => {
+    c(value);
+  };
   return (
     <>
       <Box display="flex" justifyContent="space-between" p={2}>
@@ -38,10 +38,9 @@ export const Navbar = () => {
           backgroundColor={colors.primary[400]}
           borderRadius="3px"
         >
-          <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
-          <IconButton type="button" sx={{ p: 1 }}>
-            <SearchIcon />
-          </IconButton>
+          <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
+            <FaBars />
+          </div>
         </Box>
         <Box display="flex">
           <IconButton onClick={colorMode.toggleColorMode}>
@@ -51,14 +50,11 @@ export const Navbar = () => {
               <LightModeOutlined />
             )}
           </IconButton>
-          <IconButton>
-            <NotificationAddOutlined />
-          </IconButton>
-          <IconButton>
-            <SettingsOutlined />
-          </IconButton>
-          <IconButton>
-            <PersonOutlined
+          <Button>
+            <Avatar
+              alt="user"
+              src={userIcon}
+              sx={{ width: 24, height: 24 }}
               id="basic-button"
               aria-controls={open ? "basic-menu" : undefined}
               aria-haspopup="true"
@@ -78,7 +74,7 @@ export const Navbar = () => {
               <MenuItem>My account</MenuItem>
               <MenuItem onClick={startLogout}>Logout</MenuItem>
             </Menu>
-          </IconButton>
+          </Button>
         </Box>
       </Box>
     </>

@@ -1,6 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { lendApi } from "../api";
-import { clearErrorMessage, onChecking, onLogin, onLogout } from "../store";
+import {
+  clearErrorMessage,
+  onChecking,
+  onLogin,
+  onLogout,
+  onLogoutClient,
+} from "../store";
 
 export const useAuthStore = () => {
   const { status, user, errorMessage } = useSelector((state) => state.auth);
@@ -35,6 +41,7 @@ export const useAuthStore = () => {
   };
   const startLogout = () => {
     localStorage.clear();
+    dispatch(onLogoutClient());
     dispatch(onLogout());
   };
   return {
@@ -43,6 +50,6 @@ export const useAuthStore = () => {
     user,
     checkAuthToken,
     startLogin,
-    startLogout
+    startLogout,
   };
 };

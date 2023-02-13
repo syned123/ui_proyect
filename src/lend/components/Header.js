@@ -1,8 +1,8 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { fontWeight } from "@mui/system";
+
 import { tokens } from "../theme";
 
-export const Header = ({ title, subTitle }) => {
+export const Header = ({ title}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
